@@ -1,0 +1,274 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* navbar */
+ .nav-link{
+    margin-left: 5rem;
+    transition: 2s ease;
+ }
+ .nav-link:hover {
+    text-decoration: none;
+    border-bottom: 0.5rem solid yellow;
+  }
+  .navbar-brand{
+    font-size: 1.5rem;
+  }
+  .name{
+    margin: 6rem;
+  }
+  .name-h1{
+    font-size: 5rem;
+    transition: 2s;
+  }
+  .name-h1:hover{
+transform: scale(1.1);
+box-shadow: 0.5rem 0.5rem 0.5rem #131313;   
+  }
+
+  .img-about{
+    height: 100vh;
+    border-radius: 1rem;    
+    transition:  2s ease;
+  }
+  .img-about:hover{
+    transform:scale(1.1);
+    box-shadow: 1rem 1rem 1rem #131313;
+    border-radius: 5rem;
+  }
+  .about-me{
+    transform: 2s;
+  }
+  .about-me:hover {
+    transform: scale(1);
+box-shadow: 0.5rem 0.5rem 0.5rem #3e4144; 
+  }
+  @media only screen and (max-width: 768px){
+   
+    .name{
+      font-size: medium;
+      
+    }
+    .about{
+      display: flex;
+      flex-direction: column;
+    }
+   
+    .width{
+      width: 5rem;
+    }
+    #icon{
+      display: flex;
+      flex-direction: column;
+      margin: 1rem;
+    }
+ 
+
+  }
+
+  .my-resume{
+    transition: 2s;
+  }  
+  .my-resume:hover{
+    text-decoration: none;
+    border-bottom: 0.3rem solid rgb(32, 186, 242);
+  }
+
+  @keyframes growProgressBar {
+    0%, 33% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+  }
+  
+  @property --pgPercentage {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+  }
+  
+  .progressbar[role="progressbar"] {
+    --size: 12rem;
+    --fg: #369;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+      radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+      ;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+  
+  .progressbar[role="progressbar"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+  }
+
+  #services{
+    margin-top: 7rem;
+  }
+  
+  .col-card{
+    margin: 0;
+
+    padding: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;  
+
+    font-family: sans-serif;
+
+    background-color: #f1f1f1; 
+  }
+  
+  
+  .containt-card .card-service .icon-card .fa-user-circle{
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 80px;
+
+    color: #fff;
+  }
+
+  .containt-card .card-service .slide{
+    width: 300px;
+
+    height: 200px;
+
+    transition: 0.5s;
+  }
+
+  .containt-card .card-service .slide.slide1{
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1;
+
+    transition: .7s;
+
+    transform: translateY(100px);
+  }
+
+  .containt-card .card-service:hover .slide.slide1{
+    transform: translateY(0px);
+  }
+
+  .containt-card .card-service .slide.slide2{
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    transition: .8s;
+
+    transform: translateY(-100px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+
+  .containt-card .card-service:hover .slide.slide2{
+    transform: translateY(0);
+  }
+
+  .containt-card .card-service .slide.slide2 ::after{
+    content: "";
+
+    position: absolute;
+
+    width: 30px;
+
+    height: 4px;
+
+    bottom: 15px;
+
+    left: 50%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #2c73df;
+  }
+
+  .containt-card .card-service .slide.slide2 .content-1 .p-card{
+    margin: 0;
+
+    padding: 0;
+
+    text-align: center;
+
+    color: #414141;
+  }
+
+  .containt-card .card-service .slide.slide2 .content-1 .h3-card{
+    margin: 0 0 10px 0;
+
+    padding: 0;
+
+    font-size: 24px;
+
+    text-align: center;
+
+    color: #414141;
+  }
+
+  .Ganesha{
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 5px;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Ganesha:hover{
+    background-color: #2c73df;
+  }
+
+   #blog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem;
+   }
+
+   body{
+    background: #DAE2F8;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   }
+
+   .row{
+    margin-left: 0 !important;
+    margin-right:0 !important;
+  }
